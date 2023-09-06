@@ -1,0 +1,10 @@
+---
+- name: coy a file 
+- become: yes 
+- hosts: all 
+- tasks: 
+    -copy:
+      src: /etc/passwd
+      dest: /tmp 
+      
+    
