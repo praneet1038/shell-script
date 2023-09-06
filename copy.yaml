@@ -6,5 +6,7 @@
     -copy:
       src: /etc/passwd
       dest: /tmp 
-      
+      owner: root
+      group: root 
+      mode: 777
     
