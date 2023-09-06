@@ -1,12 +1,10 @@
----
-- name: coy a file 
-- become: yes 
-- hosts: all 
-- tasks: 
-    - copy:
-        src: /etc/passwd
-        dest: /tmp 
-        owner: root
-        group: root 
-        mode: 777
-    
+- name: Copy file with owner and permissions
+  hosts: all
+  become: yes
+  tasks: 
+  ansible.builtin.copy:
+    src: /etc/passwd
+    dest: /tmp
+    owner: root
+    group: root
+    mode: '0644'
